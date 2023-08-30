@@ -1,0 +1,54 @@
+
+<body >
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+        #loadBody{
+            background-color: rgb(254, 200, 0);
+            width: 1920px;
+            height: 2450px;
+            position: absolute;
+            z-index: 99;
+        }
+        #loading{
+            width: 800px;
+            height: 600px;
+            background-image: url(./css/images/Loading.gif);
+            margin: 150px  auto 0px;
+        }
+        #loadingMessage{
+            margin: 0px auto;
+            text-align: center;
+            font-family: 'Orbitron';
+            font-size: 40px;
+            position: relative;
+            
+        }
+        #loadingMessage span{
+            position: absolute;
+            top: -140px;
+            right: 0;
+            left: 0;
+        }
+    </style> 
+    <!-- <div class="header" style="width:100%;"></div> -->
+    <div id="loadBody">
+        <div id="loading"></div>
+        <div id="loadingMessage"><span>Loading . . . </span></div>
+    </div>
+    <!-- <script>$('.header').load('./header.html')</script> -->
+    <script>
+        let a = ["Loading","Loading .","Loading . .","Loading . . ."]
+        let b = 0;
+        setInterval(text, 800)
+        function text() {
+            
+            $('#loadingMessage span').text(a[b])
+            b++;
+            if(b>3){
+                b=0
+            }
+
+        }
+    </script>
+</body>
+

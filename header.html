@@ -1,0 +1,100 @@
+<header id="legoHeader">
+
+    <div id="header">
+        <div id="headerLeft">
+            <div id="headerLog">
+                <div></div><span>LOGO</span>
+            </div>
+            <div id="headerGoods">
+                <div></div><span>SHOP</span>
+            </div>
+            <div id="headerHelp">
+                <div></div><span>HELP</span>
+            </div>
+        </div>
+        <div id="headerRight">
+            <div id="headerSignUp">
+                <div></div><span>SIGN-UP</span>
+            </div>
+            <div id="headerSign">
+                <div></div><span>SIGN-IN</span>
+            </div>
+            <div id="headerShoplist">
+                <div></div><span>BAG</span>
+            </div>
+            <div id="headerPersonal">
+                <div></div><p class="personalHello"></p><p class="personalName"></p>
+            </div>
+        </div>
+
+    </div>
+    <div id="headerMessageBox" class="unview">
+        <button class="headerMessageBoxYes" type="button">yes</button>
+        <button class="headerMessageBoxNo" type="button">no</button>
+    </div>
+
+</header>
+
+<script>
+    let loghead = JSON.parse(sessionStorage.getItem("log"))
+console.log(loghead)
+if(loghead==22){
+    $('#headerSign span').text("SIGN-OUT")
+    $('.personalHello').text("Hello")
+    $('.personalName').text(JSON.parse(sessionStorage.getItem("logname")))
+    $('#headerSign div').addClass("loging")
+    $(document).on("click","#headerSign",function(){
+        $('#headerMessageBox').removeClass("unview")
+    })
+}
+if(loghead==11){
+    $('#headerSign span').text("SIGN-IN")
+    $('#headerSign div').removeClass("loging")
+    $(document).on("click","#headerSign",function(){
+        location.href='./signin.html'
+    })
+}
+
+$(document).on("click",".headerMessageBoxYes", function(){
+    $('#headerSign span').text("SIGN-IN")
+    $('#headerSign div').removeClass("loging")
+    $('#headerMessageBox').addClass("unview")
+    sessionStorage.removeItem("logname")
+    sessionStorage.removeItem("buys")
+    loghead=11;
+    sessionStorage.setItem("log", JSON.stringify(loghead))
+    location.reload()
+})
+$(document).on("click",".headerMessageBoxNo", function(){
+    
+    $('#headerMessageBox').addClass("unview")
+    
+})
+</script>
+<script>
+
+    $(document).on("click", '#headerSignUp', function(){
+        location.href='./signup.html'
+    })
+    $(document).on("click", '#headerLog', function(){
+        location.href='./index.html'
+    })
+    $(document).on("click", '#headerGoods', function(){
+        location.href='./goods.html'
+    })
+    $(document).on("click", '#headerHelp', function(){
+        
+         sessionStorage.setItem("IndexPortal", 'https://www.lego.com/en-ca/service')
+            location.href = './loading.html'
+    })
+    $(document).on("click", '#headerShoplist', function(){
+        location.href='./bag.html'
+    })
+    
+    $(document).on("click", '#headerPersonal', function(){
+        
+            location.href='./personal.html'
+        
+    })
+
+</script>

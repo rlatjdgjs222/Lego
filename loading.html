@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    
+    <link rel="icon" type="image/x-icon" href="./css/images/header_logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+        integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+        body{
+            background-color: rgb(132, 193, 255);
+        }
+        #loading{
+            width: 800px;
+            height: 600px;
+            background-image: url(./css/images/WebLoading.gif);
+            margin: 150px  auto 0px;
+        }
+        #loadingMessage{
+            margin: 0px auto;
+            text-align: center;
+            font-family: 'Orbitron';
+            font-size: 40px;
+            position: relative;
+            display: none;
+        }
+        #loadingMessage span{
+            position: absolute;
+            top: -140px;
+            right: 0;
+            left: 0;
+        }
+    </style> 
+    <!-- <div class="header" style="width:100%;"></div> -->
+    <div id="loading"></div>
+    <div id="loadingMessage"><span>Loading . . . </span></div>
+    <!-- <script>$('.header').load('./header.html')</script> -->
+    <script>
+        let a = ["Loading","Loading .","Loading . .","Loading . . ."]
+        let d = (Math.random() * 100 ) % 3
+        let e = "1." + d
+        e = parseFloat(e)
+        d = 700 * e
+        let b = 0;
+        let c = sessionStorage.getItem("IndexPortal")
+        setInterval(text, d)
+        function text() {
+            
+           b++
+        console.log(b)
+        if (b>4){
+            location.href = c
+            sessionStorage.setItem("IndexPortal","")
+            b=0
+            
+        }
+        }
+        
+    </script>
+</body>
+</html>

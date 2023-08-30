@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="./css/images/header_logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bag</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/bag.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+        integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./dist/dom-to-image.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="header"></div>
+    <div id="allbox">
+        <div id="meButton">
+            <button type="button">
+                BUY
+            </button>
+        </div>
+        <div id="bagNoItems">
+            <p>There is Noting in your bag....</p>
+        </div>
+        <table id="bagTable">
+
+        </table>
+        <div id="bagMessageBox" class="unview">
+            <button class="bagMessageBoxYes" type="button">yes</button>
+            <button class="bagMessageBoxNo" type="button">no</button>
+        </div>
+    </div>
+    <script>//callUp
+        $('.header').load('./header.html')
+        // $('.nav').load('./nav.html')
+    </script>
+    <script type="module" src="./js/index.js"></script>
+    <script>
+        function new_box() {
+            let whatYouBuy = JSON.parse(sessionStorage.getItem("buys"))
+            console.log(whatYouBuy)
+
+            if (whatYouBuy) {
+                $('#bagNoItems').removeClass('view')
+                $('#bagTable *').remove()
+                whatYouBuy.forEach((element, index) => {
+                    let tempBox = ''
+                    tempBox += `<tr class="bagItem el{}">`
+                    tempBox += `<td class="bagImage">`
+                    tempBox += `<img src="https://github.com/jillina1004/imagebox/blob/main/${element.lessgoIndex}.png?raw=true" alt="${element.lessgoIndex}">`
+                    tempBox += `</td>`
+                    tempBox += `<td class="bagName">${element.lessgoName}</td>`
+                    tempBox += `<td class="bagPrice"><span class="howareyou">${element.lessgoPrice}</span><span class="howdareyou">${element.lessgoPrice}</span></td>`
+                    tempBox += `<td class="bagQuant">
+                    <div class="bagQuantMinus"></div>
+                    <input onkeypress="return isNumber(event)" type="text" name="bagQuantInput" id="bagQuantInput${index}"
+                        class="bagQuantInput" value="${element.lessgoQuant}">
+                    <div class="bagQuantPlus"></div>
+                </td>`
+                    tempBox += `<td class="bagDelete">DELETE</td>
+            </tr>`
+
+                    $('#bagTable').append(tempBox)
+                });
+                if (whatYouBuy.length == 0) {
+                    $('#bagTable *').remove()
+                    $('#bagNoItems').addClass('view')
+                }
+            } else {
+                $('#bagTable *').remove()
+                $('#bagNoItems').addClass('view')
+
+            }
+        }
+        new_box();
+    </script>
+    <script>
+        $(document).on("click", ".bagQuantMinus", function () {
+            let q = $(this).next().val()
+            if (q >= 2) {
+                q--;
+                $(this).next().val(q)
+                let b = $(this).parent().prev().children(".howdareyou").text()
+                let c = parseInt(q) * parseFloat(b)
+                $(this).parent().prev().children(".howareyou").text(c.toFixed(2))
+
+            }
+        })
+
+        $(document).on("click", ".bagQuantPlus", function () {
+            let q = $(this).prev().val()
+            q++;
+            $(this).prev().val(q)
+            let b = $(this).parent().prev().children(".howdareyou").text()
+                let c = parseInt(q) * parseFloat(b)
+                $(this).parent().prev().children(".howareyou").text(c.toFixed(2))
+
+        })
+        let w = ""
+        $(document).on("click", ".bagDelete", function () {
+            $('#bagMessageBox').removeClass('unview')
+            w = $(this).prev().prev().prev().prev().children().attr("alt")
+        })
+        $(document).on("click", ".bagMessageBoxYes", function () {
+            let tempBox = JSON.parse(sessionStorage.getItem("buys")) || [];
+            let objIndex = tempBox.findIndex((obj => obj.lessgoIndex == w));
+            $('#bagMessageBox').addClass('unview')
+            tempBox.splice(objIndex, 1)
+            sessionStorage.setItem("buys", JSON.stringify(tempBox))
+            setInterval(new_box(), 800);
+        })
+        $(document).on("click", ".bagMessageBoxNo", function () {
+            w = 0;
+            $('#bagMessageBox').addClass('unview')
+        })
+        $('.bagQuantInput').bind('mousewheel', function (e) {
+            let a = $(this).val()
+            e.preventDefault();
+            e.stopPropagation();
+            if (e.originalEvent.wheelDelta / 120 > 0) {
+                a ++;
+                $(this).val(a)
+                let b = $(this).parent().prev().children(".howdareyou").text()
+                
+                let c = parseInt(a) * parseFloat(b)
+                $(this).parent().prev().children(".howareyou").text(c.toFixed(2))
+            }
+            else {
+                if(a>=2){
+                a--;
+                $(this).val(a)}
+                let b = $(this).parent().prev().children(".howdareyou").text()
+                
+                let c = parseInt(a) * parseFloat(b)
+                $(this).parent().prev().children(".howareyou").text(c.toFixed(2))
+            }
+        });
+        $(document).on("input", ".bagQuantInput", function () {
+            let a = $(this).val()
+            if (a == 0) {
+                $(this).val(1)
+            }
+            else {
+                let b = $(this).parent().prev().children(".howdareyou").text()
+                
+                let c = parseInt(a) * parseFloat(b)
+                $(this).parent().prev().children(".howareyou").text(c.toFixed(2))
+            }
+        })
+    </script>
+    <script>
+
+        function isNumber(evt) { //<input type="text" onkeypress="return isNumber(event)">
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+        $('.bagQuantInput').bind('keyup blur', function () {
+            $(this).val($(this).val().replace(/[^0-9]/g, ''))
+        });
+    </script>
+
+</body>
+
+</html>

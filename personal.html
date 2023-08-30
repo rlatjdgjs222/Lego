@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="./css/images/header_logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/personal.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+        integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <div class="header"></div>
+
+    <div id="allbox">
+
+        <div id="overFlowBox">
+            <div id="FlowChar">
+                <div class="uahha"></div>
+            </div>
+            <div id="FlowChar2">
+                
+                
+                <div class="no" id="FlowId"></div>
+                <div class="no" id="FlowMail"></div>
+                
+                <div class="no" id="FlowPhone"></div>
+                
+            </div>
+
+        </div>
+    </div>
+    <script>$('.header').load('./header.html')</script>
+
+    <script type="module" src="./js/index.js"></script>
+    <script>
+        let YourName = JSON.parse(sessionStorage.getItem("logname"))
+        document.title = "Hello "+YourName;
+        let AllYourName = JSON.parse(localStorage.getItem("signupdata"))
+        let objIndex = AllYourName.findIndex((obj => obj.id == YourName))
+        let a = AllYourName[objIndex].picture
+        $('#FlowChar').css({
+            backgroundImage: `url(${a})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "-590px -309px"
+        })
+        let c = `<div class="c"></div>`
+        let b = `<br>`
+        $('#FlowId').text(AllYourName[objIndex].id)
+        $('#FlowMail').text(AllYourName[objIndex].email)
+        $('#FlowPhone').text(AllYourName[objIndex].phone)
+        $('#FlowId').prepend(b)
+        $('#FlowMail').prepend(b)
+        $('#FlowPhone').prepend(b)
+        $('#FlowId').append(c)
+        $('#FlowMail').append(c)
+        $('#FlowPhone').append(c)
+    </script>
+    <!-- <script>var colors = [
+        "red",
+        "pink",
+        "purple",
+        "deep-purple",
+        "indigo",
+        "blue",
+        "light-blue",
+        "cyan",
+        "teal",
+        "green",
+        "light-green",
+        "lime",
+        "yellow",
+        "amber",
+        "orange",
+        "deep-orange",
+        "brown",
+        "grey",
+        "blue-grey"
+    ];
+    
+    $(".brick").each(function () {
+        var color = colors[Math.round(Math.random() * colors.length)];
+        console.log(color);
+        $(this).addClass("b-" + color);
+    });
+    
+    // var $board = $('.board').packery({
+    //     itemSelector: '.brick'
+    // });
+    
+    $(".brick").each(function (i, boardItem) {
+        var draggie = new Draggabilly(boardItem);
+        // bind drag events to Packery
+        // $board.packery( 'bindDraggabillyEvents', draggie );
+    });
+    </script> -->
+</body>
+
+</html>

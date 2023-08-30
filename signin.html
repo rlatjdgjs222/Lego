@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="icon" type="image/x-icon" href="./css/images/header_logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/signin.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="header"></div>
+    <div id="allbox">
+        <div id="signInLegoHead">
+            <div id="signInFace"></div><!--class="face"-->
+            <div id="signInData">
+                <div id="signInErrorbox"></div>
+                <form action="" class="signInForm">
+                    <ul>
+                        <span class="signInMessage">Welcome!</span>
+                        <li>ID</li>
+                        <li><input class="signInInput" type="text" autocomplete="off" id="signInId"></li>
+                        <li>PASSWORD</li>
+                        <li><input class="signInInput" type="password" autocomplete="off" id="signInPassword"></li>
+                        <li id="signInButton">
+                            <button type="button" id="signInButtonBack">BACK</button>
+                            <button type="button" id="signInButtonClear">SIGN-UP</button>
+                            <button type="button" id="signInButtonDone">CONFIRM</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div id="signInGoHome">
+                
+            </div>
+        </div>
+    </div>
+    <script>$('.header').load('./header.html')</script>
+    
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/jssignin.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-Us">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="./css/images/header_logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signUp</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+        integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./dist/dom-to-image.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <div class="header" style="width:100%;"></div>
+    <div id="yesss"></div>
+
+    <div id="allbox" style="position: fixed; top:75px; left:0; right:0;">
+        <section id="signUp">
+            <div id="signUpMinifigure">
+                <div class="head2"></div>
+                <div id="minifigureHTML"></div>
+            </div>
+            <div id="signUpInfobox">
+                <div>
+                    <form action="#" class="signUpForm">
+                        <table>
+                            <colgroup>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr class="signUpHead">
+                                    <th colspan="2">
+                                        <p class="signUpFormHead">Let's Go, Our Lego land!</p>
+                                        <p class="signInFormSign">Please fill up the form below</p>
+                                        <p class="emailcheck infoDone"> Please type right form of email </p>
+                                        <ul class="signUpFormStatus">
+                                            <li class="infoDone">ID</li>
+                                            <li class="infoDone">PASSWORD</li>
+                                            <li class="infoDone">E-MAIL</li>
+                                            <li class="infoDone">PHONE NUMBER</li>
+                                            <li class="infoDone">GENDER</li>
+                                            <li class="infoDone">BIRTHDAY</li>
+                                        </ul><!--메시지 뜰 예정-->
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <!-- <td>ID</td> -->
+                                    <td><input class="infovalue" type="text" autocomplete="off" id="signUpFormName"
+                                            placeholder="ID"></td>
+                                </tr>
+                                <tr>
+                                    <!-- <td>PASSWORD</td> -->
+                                    <td><input class="infovalue" type="password" autocomplete="off"
+                                            id="signUpFormPassword" placeholder="PASSWORD"></td>
+                                </tr>
+                                <tr>
+                                    <!-- <td>E-MAIL</td> -->
+                                    <td><input class="infovalue" type="text" autocomplete="off" id="signUpFormEmail"
+                                            placeholder="E-MAIL">
+                                            <div id="emailerror" >YOU MUST INCLUDE WITH '@' '.' </div></td>
+                                </tr>
+                                <tr>
+                                    <!-- <td>PHONE NUMBER</td> -->
+                                    <td><input class="infovalue" type="text" autocomplete="off" id="signUpFormPhone"
+                                            placeholder="PHONE NUMBER"></td>
+                                </tr>
+                                <!-- <tr>
+                                    
+                                    <td>
+                                        <p>GENDER</p>
+                                        <input class="infovalue signUpFormGenderRadio" type="radio" name="signUpFormGender" id="signUpFormGenderRadioMale" value="male">
+                                        <label for="signUpFormGenderRadioMale">male</label>
+                                        <input class="infovalue signUpFormGenderRadio" type="radio" name="signUpFormGender" id="signUpFormGenderRadioFemale" value="female">
+                                        <label for="signUpFormGenderRadiofemale">female</label>
+                                    </td>
+                                </tr> -->
+                                <tr>
+                                    <!-- <td>BIRTHDAY</td> -->
+                                    <td><input class="infovalue " type="date" name="signUpFormBirth"
+                                            id="signUpFormBirth" style="font-family: Noto Sans KR; opacity: 0.7;;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2" id="signUpButton">
+                                        <button type="button" id="signUpButtonBack">BACK</button>
+                                        <button type="button" id="signUpButtonClear">CLEAR</button>
+                                        <button type="button" id="signUpButtonDone">CONFIRM</button>
+                                    </td>
+
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </form>
+                </div>
+                <div class="head2"></div>
+            </div>
+            <div id="signUpGoHome">
+                
+            </div>
+        </section>
+    </div>
+
+    <script>
+        $("#minifigureHTML").load('./minifigure.html')
+
+    </script>
+    <script>$('.header').load('./header.html')</script>
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/jssignup.js"></script>
+
+
+
+</body>
+
+</html>
