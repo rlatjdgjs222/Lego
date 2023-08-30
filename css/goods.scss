@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Great+Vibes&family=Manrope&family=Montserrat+Alternates&family=Mukta&family=Roboto+Flex:opsz@8..144&family=Ubuntu+Condensed&display=swap');
+
+#allbox {
+    position: relative;
+    height: auto;
+    max-width: 1440px;
+    min-width: 1440px;
+    margin: 0px auto;
+
+    height: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Black Ops One', cursive;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+
+    #goodsNav {
+        width: 200%;
+        height: 135px;
+
+        position: absolute;
+        top: 85px;
+        left: 0px;
+        display: flex;
+        z-index: 1;
+
+        #goodsNavLeft {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 42px;
+            left: -43px;
+            // background-color: red;
+            background-image: url(./images/left.png);
+            background-size: 100% 100%;
+            z-index: 10;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        #goodsNavRight {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 42px;
+            left: 1453px;
+            background-image: url(./images/right.png);
+            background-size: 100% 100%;
+            z-index: 100;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .goodsNavEl {
+            height: 100%;
+            width: 150px;
+            margin-right: 10px;
+            background: rgb(255, 255, 255);
+            // background: radial-gradient(circle, rgba(255,255,255,1) 77%, rgba(0,0,0,0.43461134453781514) 100%);
+            box-shadow: 0px 0px 5px 1px rgba(10, 10, 10, 0.7);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            justify-content: center;
+
+            &.unview {
+                display: none;
+            }
+
+            img {
+                cursor: pointer;
+                height: 100%;
+                width: auto;
+
+            }
+        }
+
+        #goodsNavShowing {
+            width: 1440px;
+            height: 100%;
+            background-color: beige;
+            display: none;
+        }
+    }
+
+    #goodsNow {
+        width: 100%;
+        font-family: 'Bebas Neue';
+        font-size: 56px;
+        position: absolute;
+        top: 300px;
+        height: 60px;
+        padding-top: 5px;
+        background: rgb(236, 255, 254);
+        background: radial-gradient(circle, rgba(236, 255, 254, 0.8995973389355743) 20%, rgba(255, 255, 255, 1) 89%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #goodsNowMessage {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
+
+    #goodsList {
+        width: 100%;
+
+        // background-color: aqua;
+        position: absolute;
+        top: 385px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 30px;
+
+        .goodsItemsBox {
+            flex-shrink: 0;
+            cursor: pointer;
+            position: relative;
+            width: 320px;
+            height: 320px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            // background-color: cornflowerblue;
+            &.able0 img {
+                filter: grayscale(70%) brightness(60%);
+            }
+
+            img {
+                display: block;
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+
+            }
+
+            &.view {
+                border: 2px solid rgba(4, 4, 4, 0);
+                border-radius: 5px;
+                box-shadow: 2px 2px 4px rgba(4, 4, 4, 0.5);
+            }
+
+            p { width: 290px;
+                font-family: 'Mukta';
+                font-size: 20px;
+                position: absolute;
+                bottom: 15px;
+                left: 15px;
+                
+                padding: 3px 0;
+                margin-left: 0;
+                margin-right: 0;
+                text-align: center;
+                word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: white;
+                background: rgb(2, 108, 185, 0.9);
+                
+            }
+
+        }
+    }
+}

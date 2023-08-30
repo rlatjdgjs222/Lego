@@ -1,0 +1,91 @@
+footer {
+  background-image: url(./images/footer_background_img.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  max-width: 1920px;
+  min-width: 1920px;
+  display: flex;
+  margin-top: 1em;
+  margin: auto;
+  font-family: "Poppins";
+}
+footer input,
+footer button {
+  font-size: 1em;
+  padding: 1em;
+  width: 200px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+footer button {
+  background-color: rgb(253, 128, 36);
+  color: #ffffff;
+}
+footer .content {
+  max-width: 1440px;
+  min-width: 1440px;
+  margin: 0px auto;
+  color: #ffffff;
+  font-size: 16px;
+}
+footer .content .contentRight {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  padding-top: 200px;
+}
+footer .content .contentRight .contentLeft {
+  width: 220px;
+  /* display: flex;
+  flex-direction: column; */
+}
+footer .content .contentRight .contentLeft .legoLogo {
+  width: 200px;
+}
+footer .content .contentRight .contentLeft .social {
+  /* display: flex; */
+  justify-content: space-around;
+  font-size: 2.4em;
+  flex-direction: row;
+  margin-top: 0.5em;
+}
+footer .content .contentRight .contentLeft .social i {
+  color: #ffffff;
+}
+footer .content .contentRight .contentLeft div.subscribe div {
+  width: 200px;
+}
+footer .content .contentRight .column {
+  width: 15%;
+}
+footer .content .contentRight .column:last-child {
+  width: 18%;
+}
+footer .content .contentRight .column h3 {
+  font-size: 2em;
+  word-wrap: normal;
+}
+footer .content .contentRight .column ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+footer .content .contentRight .column ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  text-indent: 15px;
+}
+footer .content .contentRight .column ul li:not(:first-child) {
+  margin-top: 0.8em;
+}
+footer .content .copyright {
+  padding: 0.3em 1em;
+}
+footer .content .copyright p {
+  font-size: 0.9em;
+  text-align: left;
+  text-indent: 15px;
+}/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Manrope&family=Montserrat+Alternates&family=Roboto+Flex:opsz@8..144&family=Ubuntu+Condensed&display=swap");
+#legoHeader {
+  max-width: auto;
+  height: 75px;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#legoHeader #header {
+  width: 1440px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+}
+#legoHeader #header #headerLeft {
+  display: flex;
+  align-items: center;
+}
+#legoHeader #header #headerLeft div {
+  padding-right: 50px;
+}
+#legoHeader #header #headerLeft #headerLog div {
+  width: 55px;
+  height: 55px;
+  background-image: url(./images/header_logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+#legoHeader #header #headerLeft #headerLog span {
+  display: none;
+}
+#legoHeader #header #headerLeft #headerGoods div {
+  width: 55px;
+  height: 55px;
+  background-image: url(./images/header_shop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+#legoHeader #header #headerLeft #headerGoods span {
+  display: none;
+}
+#legoHeader #header #headerLeft #headerHelp div {
+  width: 55px;
+  height: 55px;
+  background-image: url(./images/header_help.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+#legoHeader #header #headerLeft #headerHelp span {
+  display: none;
+}
+#legoHeader #header #headerRight {
+  display: flex;
+  align-items: center;
+}
+#legoHeader #header #headerRight div {
+  padding-left: 50px;
+}
+#legoHeader #header #headerRight #headerSignUp {
+  display: flex;
+  align-items: center;
+}
+#legoHeader #header #headerRight #headerSignUp div {
+  padding: 0;
+  width: 30px;
+  height: 32px;
+  background-image: url(./images/legohead.PNG);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  line-height: 32px;
+  cursor: pointer;
+}
+#legoHeader #header #headerRight #headerSignUp span {
+  padding-left: 3px;
+  display: block;
+  cursor: pointer;
+}
+#legoHeader #header #headerRight #headerSign {
+  display: flex;
+  align-items: center;
+}
+#legoHeader #header #headerRight #headerSign div {
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  background-image: url(./images/BtnPower.png);
+  filter: brightness(110%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  line-height: 32px;
+}
+#legoHeader #header #headerRight #headerSign div.loging {
+  background-image: url(./images/BtnPower.png);
+  filter: brightness(80%);
+}
+#legoHeader #header #headerRight #headerSign span {
+  cursor: pointer;
+  padding-left: 3px;
+  display: block;
+}
+#legoHeader #header #headerRight #headerShoplist {
+  display: flex;
+  align-items: center;
+}
+#legoHeader #header #headerRight #headerShoplist div {
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 32px;
+  background-image: url(./images/legobag.PNG);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  line-height: 32px;
+}
+#legoHeader #header #headerRight #headerShoplist span {
+  display: none;
+}
+#legoHeader #header #headerRight #headerPersonal p {
+  font-family: "Manrope";
+  cursor: pointer;
+  display: block;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+  font-size: 17px;
+}
+#legoHeader #header #headerRight #headerPersonal p.personalName {
+  text-indent: 2px;
+  font-weight: 800;
+}
+#legoHeader #headerMessageBox {
+  background-image: url(./images/messageSignOut.png);
+  display: flex;
+  width: 450px;
+  height: 132px;
+  position: absolute;
+  top: 50px;
+  justify-content: center;
+  align-items: end;
+  z-index: 50;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border: solid 8px black;
+  border-radius: 20px;
+  background-color: darkgrey;
+}
+#legoHeader #headerMessageBox.unview {
+  display: none;
+}
+#legoHeader #headerMessageBox button[type=button] {
+  text-decoration: none;
+  padding: 4px 15px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;
+  border: rgba(253, 128, 36, 0);
+  cursor: pointer;
+}
+#legoHeader #headerMessageBox button[type=button]:hover {
+  color: #000;
+}
+#legoHeader #headerMessageBox button[type=button]:nth-child(1) {
+  background-color: rgb(255, 0, 0);
+  margin-left: 60px;
+}
+#legoHeader #headerMessageBox button[type=button]:nth-child(1):active {
+  background-color: #ddd;
+}
+#legoHeader #headerMessageBox button[type=button]:nth-child(2) {
+  background-color: rgb(2, 108, 185);
+}
+#legoHeader #headerMessageBox button[type=button]:nth-child(2):active {
+  background-color: #ddd;
+}/*# sourceMappingURL=header.css.map */

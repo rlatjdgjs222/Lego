@@ -1,0 +1,334 @@
+#allbox {
+  max-width: 1440px;
+  min-width: 1440px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "Black Ops One", cursive;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+}
+
+#main {
+  max-width: 1440px;
+  min-width: 1440px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "Black Ops One", cursive;
+  font-family: "Noto Sans", sans-serif;
+  position: relative;
+  font-size: 16px;
+}
+#main .slick-arrow {
+  position: absolute;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  font-size: 0px;
+  border: none;
+  background-color: white;
+  filter: none;
+  cursor: pointer;
+}
+#main .slick-arrow.slick-prev {
+  top: 35%;
+  left: -5%;
+  background-image: url(./images/left.png);
+  background-size: 100% 100%;
+  filter: none;
+}
+#main .slick-arrow.slick-next {
+  top: 35%;
+  right: -5%;
+  background-image: url(./images/right.png);
+  background-size: 100% 100%;
+}
+#main #mainSlickOut {
+  flex: 1 0 1;
+  margin: 0px auto;
+  width: 1440px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#main #mainSlickOut .mainSlickIn {
+  flex: 1 0 1;
+  width: 100%;
+  height: 350px;
+  padding-bottom: 0;
+}
+#main #mainSlickOut .mainSlickIn .slick-track {
+  padding-bottom: 20px;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm {
+  width: 300px;
+  height: 290px;
+  margin: 0px 15px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7));
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUnder {
+  width: 85%;
+  height: 240px;
+  border-radius: 25px;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUnder.up01 {
+  background: rgb(79, 37, 18);
+  background: linear-gradient(45deg, rgb(79, 37, 18) 0%, rgb(232, 205, 147) 100%);
+  height: 200px;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUnder.up02 {
+  background: rgb(196, 21, 43);
+  background: linear-gradient(45deg, rgb(196, 21, 43) 0%, rgb(234, 110, 112) 100%);
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUnder.up03 {
+  background: rgb(40, 67, 106);
+  background: linear-gradient(45deg, rgb(40, 67, 106) 0%, rgb(124, 160, 189) 100%);
+  height: 190px;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUnder.up04 {
+  background: rgb(38, 38, 38);
+  background: linear-gradient(45deg, rgb(38, 38, 38) 0%, rgb(164, 164, 164) 100%);
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUnder.up05 {
+  background: rgb(79, 37, 18);
+  background: linear-gradient(45deg, rgb(79, 37, 18) 0%, rgb(232, 205, 147) 100%);
+  height: 190px;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUnder.up06 {
+  background: rgb(24, 72, 44);
+  background: linear-gradient(45deg, rgb(24, 72, 44) 0%, rgb(151, 206, 120) 100%);
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUnder.up07 {
+  background: rgb(248, 157, 34);
+  background: linear-gradient(45deg, rgb(248, 157, 34) 0%, rgb(254, 231, 60) 100%);
+  height: 190px;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUnder.up08 {
+  background: rgb(0, 92, 153);
+  background: linear-gradient(45deg, rgb(0, 92, 153) 0%, rgb(29, 155, 214) 100%);
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUpper {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(5px 5px 5px #000);
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUpper:nth-child(1) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUpper:nth-child(2) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUpper:nth-child(3) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUpper:nth-child(4) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUpper:nth-child(5) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUpper:nth-child(6) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUpper:nth-child(7) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUpper:nth-child(8) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUpper:hover img {
+  width: 100%;
+}
+#main #mainSlickOut .mainSlickIn .mainSlickForm .mainSlickUpper img {
+  width: 75%;
+  transition: all 0.4s;
+}
+#main #mainSlickOut .mainSlickIn2 {
+  flex: 1 0 1;
+  width: 100%;
+  height: 350px;
+}
+#main #mainSlickOut .mainSlickIn2 .slick-track {
+  padding-bottom: 20px;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm {
+  width: 300px;
+  height: 290px;
+  margin: 0px 15px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7));
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUnder {
+  width: 85%;
+  height: 240px;
+  border-radius: 25px;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUnder.up01 {
+  background: rgb(79, 37, 18);
+  background: linear-gradient(45deg, rgb(79, 37, 18) 0%, rgb(232, 205, 147) 100%);
+  height: 200px;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUnder.up02 {
+  background: rgb(196, 21, 43);
+  background: linear-gradient(45deg, rgb(196, 21, 43) 0%, rgb(234, 110, 112) 100%);
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUnder.up03 {
+  background: rgb(40, 67, 106);
+  background: linear-gradient(45deg, rgb(40, 67, 106) 0%, rgb(124, 160, 189) 100%);
+  height: 190px;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUnder.up04 {
+  background: rgb(38, 38, 38);
+  background: linear-gradient(45deg, rgb(38, 38, 38) 0%, rgb(164, 164, 164) 100%);
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUnder.up05 {
+  background: rgb(79, 37, 18);
+  background: linear-gradient(45deg, rgb(79, 37, 18) 0%, rgb(232, 205, 147) 100%);
+  height: 190px;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUnder.up06 {
+  background: rgb(24, 72, 44);
+  background: linear-gradient(45deg, rgb(24, 72, 44) 0%, rgb(151, 206, 120) 100%);
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUnder.up07 {
+  background: rgb(248, 157, 34);
+  background: linear-gradient(45deg, rgb(248, 157, 34) 0%, rgb(254, 231, 60) 100%);
+  height: 190px;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUnder.up08 {
+  background: rgb(0, 92, 153);
+  background: linear-gradient(45deg, rgb(0, 92, 153) 0%, rgb(29, 155, 214) 100%);
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUpper {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(5px 5px 5px #000);
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUpper:nth-child(1) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUpper:nth-child(2) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUpper:nth-child(3) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUpper:nth-child(4) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUpper:nth-child(5) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUpper:nth-child(6) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUpper:nth-child(7) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUpper:nth-child(8) {
+  bottom: 5%;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUpper:hover img {
+  width: 100%;
+}
+#main #mainSlickOut .mainSlickIn2 .mainSlickForm .mainSlickUpper img {
+  width: 75%;
+  transition: all 0.4s;
+}
+#main .helpBox {
+  text-align: center;
+  height: 600px;
+  width: 1440px;
+  background-color: rgb(255, 207, 0);
+  position: absolute;
+  display: block;
+  padding-top: 40px;
+}
+#main .helpBox .helpBoxMiddle {
+  position: relative;
+  margin-right: 300px;
+}
+#main .helpBox .helpBoxMiddle::before {
+  content: "";
+  position: absolute;
+  right: -450px;
+  width: 563px;
+  height: 748px;
+  z-index: 10;
+  background-size: 70% auto;
+  background-repeat: no-repeat;
+  background-image: url(./images/helpBoxCharecter.png);
+}
+#main .helpBox .helpBoxMiddle h3 {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Black Ops One", cursive;
+  text-transform: capitalize;
+  color: #fff;
+  padding-top: 50px;
+}
+#main .helpBox .helpBoxMiddle .socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+  font-size: 20px;
+}
+#main .helpBox .helpBoxMiddle .socials li {
+  padding-top: 50px;
+  padding-left: 20px;
+}
+#main .helpBox .helpBoxMiddle .socials li p {
+  cursor: help;
+}
+#main .helpBox .helpBoxMiddle .socials .icon {
+  display: inline-flex;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #fff;
+  border: 5px solid #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+#main .helpBox .helpBoxMiddle .socials .icon i {
+  font-size: 60px;
+  transition: color 0.4s ease;
+}
+#main .helpBox .helpBoxMiddle .socials .name {
+  padding-top: 10px;
+  font-size: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+#main .helpBox .helpBoxNull {
+  flex-grow: 1;
+}
+
+.mainSlickUnder {
+  cursor: pointer;
+}
+
+.mainSlickUpper {
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */

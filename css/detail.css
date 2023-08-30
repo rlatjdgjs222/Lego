@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Manrope&family=Montserrat+Alternates&family=Roboto+Flex:opsz@8..144&family=Ubuntu+Condensed&display=swap");
+#allbox {
+  max-width: 1440px;
+  min-width: 1440px;
+  margin: 0px auto;
+  padding-top: 40px;
+  font-family: "Black Ops One", cursive;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+}
+#allbox #detailMain {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0px auto;
+  margin-bottom: 15px;
+  position: relative;
+}
+#allbox #detailMain #pleaseLogin {
+  margin: 0 auto;
+  top: 11%;
+  position: fixed;
+  background-image: url(./images/messagePlease.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 30;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border: solid 8px black;
+  border-radius: 20px;
+  width: 450px;
+  height: 132px;
+  background-color: darkgrey;
+  display: none;
+}
+#allbox #detailMain #detailImageBox2 {
+  margin: 0 auto;
+  top: 11%;
+  position: fixed;
+  background-image: url(./images/messageAdd.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 30;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border: solid 8px black;
+  border-radius: 20px;
+  width: 450px;
+  height: 132px;
+  background-color: darkgrey;
+  display: none;
+}
+#allbox #detailMain #detailImageBox2 button[type=button] {
+  position: absolute;
+  bottom: 0;
+  text-decoration: none;
+  padding: 4px 15px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;
+  border: rgba(253, 128, 36, 0);
+  cursor: pointer;
+}
+#allbox #detailMain #detailImageBox2 button[type=button]:hover {
+  color: #000;
+}
+#allbox #detailMain #detailImageBox2 button[type=button]:nth-child(2) {
+  background-color: rgb(255, 0, 0);
+  margin-left: 60px;
+  left: 0;
+}
+#allbox #detailMain #detailImageBox2 button[type=button]:nth-child(2):active {
+  background-color: #ddd;
+}
+#allbox #detailMain #detailImageBox2 button[type=button]:nth-child(3) {
+  background-color: rgb(2, 108, 185);
+  right: 110px;
+}
+#allbox #detailMain #detailImageBox2 button[type=button]:nth-child(3):active {
+  background-color: #ddd;
+}
+#allbox #detailMain #detailMainLeft {
+  width: 58%;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+#allbox #detailMain #detailMainLeft #detailImageBox {
+  width: 750px;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgb(255, 255, 255) 61%, rgba(0, 0, 0, 0.0592612045) 100%);
+}
+#allbox #detailMain #detailMainLeft #detailImageBox img {
+  max-width: 755px;
+  max-height: 750px;
+  width: auto;
+  height: auto;
+  transform: scale(90%);
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.7));
+}
+#allbox #detailMain #detailMainLeft #detailImageBox img.unview {
+  filter: grayscale(100%) brightness(80%) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7));
+}
+#allbox #detailMain #detailMainLeft #soldOut {
+  width: 750px;
+  height: 750px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 700px 330px;
+  background-image: url(./images/soldOut.png);
+  display: none;
+}
+#allbox #detailMain #detailMainLeft #soldOut.view {
+  display: block;
+}
+#allbox #detailMain #detailMainLeft #detail3Info {
+  margin-top: 0%;
+  width: 530px;
+  height: 250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Bebas Neue";
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+#allbox #detailMain #detailMainLeft #detail3Info #detailInfoL {
+  width: 25%;
+  height: 80%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#allbox #detailMain #detailMainLeft #detail3Info #detailInfoL span {
+  font-family: "Montserrat Alternates";
+}
+#allbox #detailMain #detailMainLeft #detail3Info #detailInfoM {
+  width: 25%;
+  height: 80%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 3px solid rgba(40, 40, 40, 0.4);
+  border-right: 3px solid rgba(40, 40, 40, 0.4);
+}
+#allbox #detailMain #detailMainLeft #detail3Info #detailInfoM span {
+  font-family: "Montserrat Alternates";
+}
+#allbox #detailMain #detailMainLeft #detail3Info #detailInfoR {
+  width: 25%;
+  height: 80%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#allbox #detailMain #detailMainLeft #detail3Info #detailInfoR span {
+  font-family: "Montserrat Alternates";
+}
+#allbox #detailMain #detailMainRight {
+  width: 38%;
+  background: rgba(213, 213, 213, 0.2);
+  box-shadow: inset 0 0 50px 10px rgb(255, 255, 255);
+}
+#allbox #detailMain #detailMainRight ul {
+  height: 980px;
+  width: 95%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  font-family: "Roboto Flex";
+  justify-content: space-between;
+}
+#allbox #detailMain #detailMainRight ul li {
+  padding-left: 30px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+#allbox #detailMain #detailMainRight ul li p {
+  font-family: "Ubuntu Condensed";
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+#allbox #detailMain #detailMainRight ul li span {
+  padding-left: 1em;
+}
+#allbox #detailMain #detailMainRight ul #detailListStarsNew {
+  display: flex;
+  justify-content: space-between;
+}
+#allbox #detailMain #detailMainRight ul #detailListStarsNew #detailStars img {
+  width: 30px;
+  height: 30px;
+}
+#allbox #detailMain #detailMainRight ul #detailListStarsNew #detailNew {
+  font-family: "anton";
+  display: block;
+  margin-right: 50px;
+  font-size: 35px;
+}
+#allbox #detailMain #detailMainRight ul #detailListPrice span::before {
+  content: "$ ";
+}
+#allbox #detailMain #detailMainRight ul #detailListButton {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+}
+#allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonMinus {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+  cursor: zoom-out;
+  background-image: url(./images/BtnRed.png);
+  transition: all 0.5s;
+  background-size: cover;
+}
+#allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonPlus {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+  cursor: zoom-in;
+  background-image: url(./images/BtnBlue.png);
+  background-size: cover;
+}
+#allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonQuant {
+  margin: 0px 10px;
+  border: none;
+  width: 50px;
+  height: 30px;
+  background-color: azure;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+  cursor: text;
+  border-radius: 5px;
+  border: 2px solid #000;
+}
+#allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonBuy {
+  text-decoration: none;
+  padding: 8px 17px;
+  border-radius: 4px;
+  background: rgb(253, 128, 36);
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1em;
+  text-align: center;
+  border: rgb(253, 128, 36);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonBuy:hover {
+  filter: brightness(130%);
+}
+#allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonBuy.unview {
+  cursor: no-drop;
+  background-color: black;
+  opacity: 0.8;
+}
+#allbox #detailMain #detailMainBottom {
+  width: 98%;
+  margin-top: 100px;
+  padding: 20px;
+  opacity: 0.3;
+  transition: all 0.4s;
+}
+#allbox #detailMain #detailMainBottom:hover {
+  opacity: 1;
+  cursor: none;
+}
+#allbox #detailMain #detailMainBottom p {
+  font-family: "Manrope";
+  font-size: 20px;
+  line-height: 2em;
+  padding-bottom: 30px;
+}
+#allbox #detailMain #detailMainBottom p::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(./images/oneBlock.png);
+  background-position: -8px 0px;
+  margin-right: 5px;
+}
+#allbox #detailMain #detailMainBottom ul {
+  font-family: "Manrope";
+  line-height: 3em;
+  font-size: 20px;
+  text-indent: 50px;
+  padding-left: 50px;
+}
+#allbox #detailMain #detailMainBottom ul li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(./images/oneBlock.png);
+  filter: grayscale(40%);
+  background-size: 100% 100%;
+  margin-right: 5px;
+  margin-top: 5px;
+}/*# sourceMappingURL=detail.css.map */

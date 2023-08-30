@@ -1,0 +1,255 @@
+//signInArea ☆☆☆☆☆☆☆☆☆☆☆☆//
+#allbox {
+    max-width: 1440px;
+    min-width: 1440px;
+    margin: 0px auto;
+    background-color: #fff;
+    height: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Black Ops One', cursive;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+
+    //signUp의 allbox와 속성 공유//
+    #signInLegoHead {
+        width: 690px;
+        height: 810px;
+        margin: 30px auto;
+        background-image: url(./images/signInHead.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        #signInGoHome {
+            left: 17%;
+            top: -11%;
+            position: absolute;
+            background-image: url(./images/messageWelcome.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 30;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+            border: solid 8px black;
+            border-radius: 20px;
+            width: 450px;
+            height: 132px;
+            background-color: darkgrey;
+            display: none;
+
+            button {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+            }
+
+        }
+
+        #signInFace {
+            position: absolute;
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+
+            // background-image: url(./images/signInFace.png);
+            &.face {
+                background-image: url(./images/signInFace.png);
+                background-repeat: no-repeat;
+                animation: 0.8s facecome;
+
+                @keyframes facecome {
+                    0% {
+                        background-position-x: -1014px;
+                    }
+
+                    60% {
+                        background-position-x: 60px;
+                    }
+
+                    80% {
+                        background-position-x: 0px;
+                    }
+
+                    80% {
+                        background-position-x: -20px;
+                    }
+
+                    100% {
+                        background-position-x: 0px;
+                    }
+
+                }
+            }
+
+            &.face2 {
+                background-image: url(./images/signInAngry.png);
+                background-repeat: no-repeat;
+                animation: 0.8s facecome2;
+
+                @keyframes facecome2 {
+                    0% {
+                        background-position-x: +1014px;
+                    }
+
+                    60% {
+                        background-position-x: -60px;
+                    }
+
+                    80% {
+                        background-position-x: 0px;
+                    }
+
+                    80% {
+                        background-position-x: +30px;
+                    }
+
+                    100% {
+                        background-position-x: 0px;
+                    }
+
+                }
+            }
+
+            &.face3 {
+
+
+                background-repeat: no-repeat;
+                animation: 0.8s facecome3;
+
+                @keyframes facecome3 {
+                    0% {
+                        background-image: url(./images/signInAngry.png);
+                        background-position-x: 0px;
+                    }
+
+                    20% {
+                        background-image: url(./images/signInAngry.png);
+                        background-position-x: 20px;
+                    }
+
+                    30% {
+                        background-image: url(./images/signInAngry.png);
+                        background-position-x: 0px;
+                    }
+
+                    50% {
+                        background-image: url(./images/signInAngry.png);
+                        background-position-x: -60px;
+                    }
+
+                    100% {
+                        background-image: url(./images/signInAngry.png);
+
+                        background-position-x: +1014px;
+
+                    }
+
+                }
+            }
+        }
+
+        #signInData {
+            position: absolute;
+            top: 25%;
+            left: 17%;
+
+            #signInErrorbox {
+                display: none;
+                width: 449px;
+                height: 132px;
+                background-image: url(./images/messageWrong.png);
+                position: absolute;
+                background-size: cover;
+                background-repeat: no-repeat;
+                top: -65%;
+                left: 0%;
+                z-index: 30;
+                box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+                border: solid 8px black;
+                border-radius: 20px;
+
+                &.show {
+                    display: block;
+                }
+            }
+        }
+
+        .signInForm {
+            text-align: center;
+            width: 450px;
+            height: 450px;
+            // border: 1px solid #000;
+            // background-color: red;
+
+
+            ul {
+                span {
+                    margin-bottom: 40px;
+                    display: inline-block;
+                    font-family: 'Black Ops One', cursive;
+                    font-size: 50px;
+                    font-weight: bolder
+                }
+
+                li {
+                    // padding-left: 50px;
+                    padding-bottom: 10px;
+                    font-size: 26px;
+                    font-weight: 550;
+
+                    &:nth-child(4) {
+                        padding-top: 30px;
+                    }
+
+                    &:nth-child(6) {
+                        padding-top: 70px;
+                    }
+
+                    button[type=button] {
+                        text-decoration: none;
+                        padding: 15px 25px;
+                        border-radius: 5px;
+                        background: rgb(253, 128, 36);
+                        color: #fff;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        font-size: 0.8em;
+                        text-align: center;
+                        border: rgb(253, 128, 36);
+                        cursor: pointer;
+                        &:hover {    
+                            color: #000;
+                    }
+                        &:active {
+                            background: #ddd;
+                        }
+                    }
+                    #signInButtonClear{
+                        //회원가입 버튼//
+                    }
+                    input {
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        border: solid 2px rgba(0, 0, 0, 0.3);
+                        border-radius: 5px;
+                        padding: 13px;
+                        outline: 0;
+                        background-color: rgba(255, 255, 255, 0.7);
+                        font-size: 1em;
+                        
+
+                        &.infoError {
+                            border: red 3px solid;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+//★★★★★★★★★★★★ signInArea //

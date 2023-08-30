@@ -1,0 +1,101 @@
+#allbox {
+    max-width: 1440px;
+    min-width: 1440px;
+    margin: 0px auto;
+    // background-color: blanchedalmond;
+    height: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Black Ops One', cursive;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    position: relative;
+}
+
+#overFlowBox {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+
+    #FlowChar {
+        width: 300px;
+        height: 485px;
+        background-color: rgba(240, 248, 255, 0.9);
+        border-radius: 15px;
+        border: 2px black solid;
+        
+        .uahha {
+            position: absolute;
+            top: -11px;
+            left: 10px;
+            background-position: center;
+            width: 280px;
+            height: 11px;
+            background-image: url(./images/topHead.png);
+        }
+
+    }
+
+    #FlowChar2 {
+        width: 500px;
+        height: 485px;
+        // background-color: rgba(240, 248, 255, 0.9);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .no{
+            width: 95%;
+            height: 30%;
+            border: 2px solid black;
+            border-radius: 15px;
+            padding-top: 30px;
+            padding-left: 10px;
+            font-size: 230%;
+            position: relative;
+            background-color: rgba(240, 248, 255, 0.9);
+            box-shadow: 2px 2px 10px 10px rgba(189, 219, 215, 0.753);
+            
+        }
+        .c{
+            position: absolute;
+            top: -11px;
+            left: 10px;
+            background-position: center;
+            width: 95%;
+            height: 11px;
+            background-image: url(./images/topHead2.png);
+        }
+
+        #FlowId {
+            
+            &::before{
+                content: "ID";
+                font-family: "Black Ops One", cursive;
+                padding-right: 1em;
+            }
+
+        }
+
+        #FlowMail {
+            &::before{
+                content: "Email";
+                font-family: "Black Ops One", cursive;
+                padding-right: 1em;
+            }
+        }
+
+        #FlowPhone {
+            &::before{
+                content: "PhoneNumber";
+                font-family: "Black Ops One", cursive;
+                padding-right: 1em;
+            }
+        }
+    }
+
+}
